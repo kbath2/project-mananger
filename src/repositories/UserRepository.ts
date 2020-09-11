@@ -3,7 +3,7 @@ import IUserRepository from './IUserRepository';
 import User from '../models/User';
 import CreateUserDTO from '../dtos/CreateUserDTO';
 
-class UseRepository implements IUserRepository {
+class UserRepository implements IUserRepository {
   private ormRepository: Repository<User>;
 
   constructor() {
@@ -31,4 +31,4 @@ class UseRepository implements IUserRepository {
   }
 }
 
-export default UseRepository;
+export default UserRepository;

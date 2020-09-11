@@ -1,13 +1,13 @@
 import { Request, Response } from 'express';
-import UseRepository from '../repositories/UseRepository';
+import UserRepository from '../repositories/UserRepository';
 import CreateUserService from '../services/CreateUserServices';
 
 class UserController {
   public async create(request: Request, response: Response): Promise<Response> {
     const { name, email, password } = request.body;
 
-    const userRepository = new UseRepository();
-    const createUser = new CreateUserService(userRepository);
+    const userRespository = new UserRepository();
+    const createUser = new CreateUserService(userRespository);
 
     const user = await createUser.execute({
       name,

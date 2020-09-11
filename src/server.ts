@@ -1,13 +1,14 @@
 /* eslint-disable no-console */
+import 'reflect-metadata';
 import express from 'express';
 import './database';
+import routes from './routes';
 
 const app = express();
 
 app.use(express.json());
-
-app.get('/', (req, res) => res.json({ message: 'Hello Quinta-Feira' }));
+app.use(routes);
 
 app.listen(3333, () => {
-  console.log('Server Conected');
+  console.log('Server Conected port 3333');
 });
