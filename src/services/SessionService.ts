@@ -16,7 +16,7 @@ interface Response {
   user: User;
 }
 
-class CreateUserService {
+class SessionService {
   private userRepository: IUserRepository;
 
   constructor(userRepository: UseRepository) {
@@ -49,4 +49,4 @@ class CreateUserService {
   }
 }
 
-export default CreateUserService;
+export default SessionService;
