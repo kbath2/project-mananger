@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import 'reflect-metadata';
 import './config/env';
+import 'express-async-errors';
 import express, { NextFunction, Request, Response } from 'express';
 import './database';
 import routes from './routes';

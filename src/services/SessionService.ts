@@ -36,7 +36,7 @@ class SessionService {
       throw new AppError('Credenciais inválidas', 401);
     }
 
-    const token = sign(user.id, process.env.APP_SECRET as string, {
+    const token = sign({}, process.env.APP_SECRET as string, {
       expiresIn: '1d',
     });
 
