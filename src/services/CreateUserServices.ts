@@ -1,6 +1,6 @@
 import { hash } from 'bcryptjs';
 import IUserRepository from '../repositories/IUserRepository';
-import UseRepository from '../repositories/UseRepository';
+import UseRepository from '../repositories/UserRepository';
 import User from '../models/User';
 
 interface Request {
